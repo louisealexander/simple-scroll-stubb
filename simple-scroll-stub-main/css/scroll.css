@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: darkkhaki;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    font-size: 3rem;
+    text-align: center;
+}
+header{
+    height: 600px;
+    line-height: 600px;
+    border: goldenrod 5px solid;
+}
+#container{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.scroll-element{
+    height: 600px;
+    line-height: 600px;
+}
+/* sets a background colour for each content division */
+#content1{
+    background-color: darkolivegreen;
+}
+#content2{
+    background-color: darkgoldenrod;
+}
+#content3{
+    background-color: olivedrab;
+}
+#content4{
+    background-color: bisque;
+}
+.js-scroll{
+    opacity: 0;
+}
+.scrolled.fade-in{
+    animation: fade-in ease-in-out both;
+}
+/* Keyframe animations */
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
