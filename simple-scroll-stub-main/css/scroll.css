@@ -38,11 +38,29 @@ header{
 #content4{
     background-color: bisque;
 }
+#content5{
+    background-color: darkseagreen;
+}
+#content6{
+    background-color: seagreen;
+}
 .js-scroll{
     opacity: 0;
 }
 .scrolled.fade-in{
-    animation: fade-in ease-in-out both;
+    animation: fade-in 1s ease-in-out both;
+}
+.scrolled.slide-left{
+    animation: slide-in-left 1s ease-in-out both;
+}
+.scrolled.slide-right{
+    animation: slide-in-right 1s ease-in-out both;
+}
+.scrolled.slide-bottom{
+    animation: slide-in-bottom 1s ease-in-out both;
+}
+.scrolled.slide-bottom-zig-zag{
+    animation: slide-in-bottom-zig-zag 1s ease-in-out both;
 }
 /* Keyframe animations */
 @keyframes fade-in {
@@ -50,6 +68,66 @@ header{
         opacity: 0;
     }
     100%{
+        opacity: 1;
+    }
+}
+@keyframes slide-in-right {
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-left {
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-bottom {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-bottom-zig-zag {
+    0%{
+        opacity: 0;
+    }
+    30%{
+        transform: translateY(-50px);
+    }
+    40%{
+        transform: translateY(50px);
+    }
+    50%{
+        transform: translateY(-40px);
+    }
+    60%{
+        transform: translateY(40px);
+    }
+    70%{
+        transform: translateY(-40px);
+    }
+    80%{
+        transform: translateY(20px);
+    }
+    90%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
         opacity: 1;
     }
 }
